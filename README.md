@@ -12,93 +12,67 @@ https://creative-sherbet-a51eac.netlify.app/
 
 ---
 
-# Análise inicial da aplicação
+## Análise inicial da aplicação
 
-A aplicação consiste em um sistema simples para **cadastro e listagem de cursos**.
+A aplicação analisada consiste em um sistema web simples para **cadastro e gerenciamento de cursos**. Durante a exploração inicial da aplicação, foi possível identificar algumas funcionalidades principais relacionadas ao registro e visualização de cursos.
 
-Durante a exploração inicial, foi possível identificar que o sistema permite ao usuário:
-
-- Cadastrar novos cursos
-- Listar cursos cadastrados
-- Excluir cursos
-- Visualizar informações básicas de cada curso
-
-A interface é simples e possui foco principal no gerenciamento de cursos.
-
----
-
-# Objetivo da aplicação
-
-Com base na análise da interface e funcionalidades disponíveis, o objetivo da aplicação parece ser permitir que usuários possam **registrar e visualizar cursos**, contendo informações como:
-
-- Nome do curso
-- Descrição
-- Instrutor
-- Data de início e término
-- Tipo do curso (online ou presencial)
-- Informações adicionais como endereço ou link de inscrição
-
-A aplicação parece simular um sistema de **gerenciamento de cursos ou treinamentos**.
-
----
-
-# Principais fluxos disponíveis
-
-Durante a exploração da aplicação, foram identificados os seguintes fluxos principais:
+Com base nessa análise, foram identificados os seguintes fluxos principais do sistema:
 
 ### 1. Cadastro de curso
-
-Fluxo onde o usuário preenche um formulário contendo informações do curso e realiza o cadastro no sistema.
+Fluxo em que o usuário preenche um formulário com as informações do curso e realiza o cadastro no sistema.
 
 ### 2. Listagem de cursos
-
-Fluxo responsável por exibir os cursos cadastrados no sistema em formato de cards.
+Fluxo responsável por exibir os cursos cadastrados, apresentados em formato de cards contendo as principais informações de cada curso.
 
 ### 3. Exclusão de curso
-
-Fluxo onde o usuário pode remover cursos previamente cadastrados.
+Fluxo que permite ao usuário remover cursos previamente cadastrados no sistema.
 
 ### 4. Visualização das informações do curso
-
-Após o cadastro, os cursos são exibidos na listagem com suas informações básicas.
+Após o cadastro, os cursos passam a ser exibidos na listagem, permitindo a visualização das informações básicas cadastradas para cada curso.
 
 ---
 
-# Pontos críticos do sistema para teste
+## Pontos críticos do sistema para teste
 
-Durante a análise inicial, alguns pontos foram considerados mais críticos para testes:
+Durante a análise inicial da aplicação, foi possível identificar alguns pontos considerados críticos para a qualidade e funcionamento do sistema.
 
-### Validação de campos
+### Cadastro de cursos
 
-O sistema depende de dados inseridos pelo usuário, portanto é importante validar:
+O fluxo de cadastro de cursos foi considerado o ponto mais crítico da aplicação, pois é responsável pela entrada de dados no sistema.  
+Grande parte das funcionalidades da aplicação depende diretamente das informações cadastradas nesse fluxo.
 
-- campos obrigatórios
+Caso ocorram falhas nesse processo, funcionalidades como a listagem e visualização de cursos podem ser impactadas.
+
+Por esse motivo, foram realizados diversos testes relacionados a:
+
+- validação de campos obrigatórios
 - formatos de entrada
 - limite de caracteres
 - validação de datas
+- verificação de duplicidade de cursos
 
 ### Integridade dos dados
 
-Garantir que os dados cadastrados sejam exibidos corretamente na listagem de cursos.
+Também foi considerado importante verificar se os dados cadastrados são armazenados e exibidos corretamente na listagem de cursos.
 
 ### Regras de negócio
 
-Verificar comportamentos esperados como:
+Foram avaliadas regras de comportamento esperadas do sistema, como:
 
-- impedir cadastro duplicado
-- validar datas de início e término
-- exibir corretamente dados específicos de cursos online ou presenciais
+- validação de datas de início e término
+- comportamento para cursos presenciais e online
+- consistência das informações exibidas
 
 ### Funcionalidade de exclusão
 
-A exclusão de cursos é uma funcionalidade crítica, pois envolve remoção de dados do sistema.
+A exclusão de cursos também foi considerada um ponto relevante, pois envolve remoção de dados do sistema e pode impactar diretamente a integridade das informações exibidas.
 
 ### Interface e experiência do usuário
 
-Também foram observados aspectos relacionados a:
+Além das funcionalidades principais, também foram observados aspectos relacionados à experiência do usuário, como:
 
-- responsividade
 - organização da listagem de cursos
+- responsividade da interface
 - clareza das informações exibidas
 
 ---
@@ -159,9 +133,11 @@ Link da planilha:
 
 ---
 
-# Evidências de execução
+## Evidências de execução
 
-As evidências da execução dos testes foram adicionadas diretamente na planilha de testes, na aba **Bugs**, na coluna **Evidências**, contendo prints/videos de links relacionados a cada defeito identificado.
+As evidências da execução dos testes foram adicionadas diretamente na planilha de testes, na aba **Bugs**, na coluna **Evidências**, contendo registros associados a cada defeito identificado.
+
+As evidências incluem **prints de tela (Imgur)** e **gravações de vídeo realizadas com Jam**, utilizadas para demonstrar o comportamento observado durante a execução dos testes.
 
 ---
 
